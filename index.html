@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDJ Cream | Premium Skincare</title>
+    <meta name="description" content="Experience the luxury of KDJ Cream. Achieve radiant, glowing skin with our premium cosmetic collection.">
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fcf8f4',
+                            DEFAULT: '#d4af37', // Gold
+                            dark: '#ae8828',
+                            text: '#2d3748'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body class="font-sans text-brand-text bg-brand-light antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-gray-100" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-gray-900 tracking-wider">KDJ.</a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-brand-dark font-medium transition-colors">Home</a>
+                    <a href="products.html" class="text-gray-600 hover:text-brand transition-colors">Shop</a>
+                    <a href="about.html" class="text-gray-600 hover:text-brand transition-colors">Our Story</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brand transition-colors">Contact</a>
+                    <a href="products.html" class="bg-gray-900 text-white px-6 py-2.5 rounded-full hover:bg-brand transition-colors duration-300 shadow-md">Buy Now</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-brand-dark font-medium">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Shop</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Our Story</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Background elements -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-white/90 to-transparent z-10 md:w-1/2"></div>
+            <img src="assets/images/kdj_model.png" alt="Glowing Skin Model" class="w-full h-full object-cover object-center translate-x-1/4 md:translate-x-0 opacity-80 md:opacity-100" />
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="max-w-xl animate-fade-in-up">
+                <span class="text-brand font-medium tracking-widest uppercase text-sm mb-4 block">The Secret to Radiance</span>
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-gray-900 leading-tight mb-6">
+                    Reveal Your <br>True <span class="text-brand">Glow.</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed">
+                    Experience the ultimate luxury with KDJ Cream. Crafted with rare botanicals to rejuvenate, hydrate, and illuminate your skin.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="products.html" class="bg-gray-900 text-white px-8 py-4 rounded-full text-center hover:bg-brand transition-all duration-300 shadow-lg transform hover:-translate-y-1">
+                        Discover KDJ Cream
+                    </a>
+                    <a href="#benefits" class="bg-white text-gray-900 border border-gray-200 px-8 py-4 rounded-full text-center hover:border-brand hover:text-brand transition-all duration-300">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Product Section -->
+    <section class="py-24 bg-white" id="benefits">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Product Image -->
+                <div class="w-full lg:w-1/2 relative group">
+                    <div class="absolute -inset-4 bg-brand/10 rounded-full blur-2xl group-hover:bg-brand/20 transition duration-500"></div>
+                    <img src="assets/images/kdj_cream_product.png" alt="KDJ Cream Product" class="relative z-10 w-full h-auto rounded-2xl shadow-2xl transform transition duration-700 hover:scale-[1.02]">
+                </div>
+                
+                <!-- Product Details -->
+                <div class="w-full lg:w-1/2">
+                    <h2 class="font-serif text-4xl font-bold text-gray-900 mb-6">The Elixir of Youth</h2>
+                    <p class="text-gray-600 mb-8 text-lg">
+                        KDJ Cream is an innovative formula that melts into your skin, delivering intense hydration and powerful anti-aging benefits. Wake up to plump, luminous, and youthful skin every day.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-brand/10 flex items-center justify-center text-brand">
+                                <i class="ri-drop-line text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-900">Deep Hydration</h3>
+                                <p class="mt-2 text-gray-600">Locks in moisture for 48 hours, leaving skin supple and soft.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-brand/10 flex items-center justify-center text-brand">
+                                <i class="ri-sparkling-fill text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-900">Instant Radiance</h3>
+                                <p class="mt-2 text-gray-600">Illuminates the complexion and reduces dullness instantly.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 h-12 w-12 rounded-full bg-brand/10 flex items-center justify-center text-brand">
+                                <i class="ri-shield-check-line text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-xl font-semibold text-gray-900">Anti-Aging Shield</h3>
+                                <p class="mt-2 text-gray-600">Protects against environmental stressors and smooths fine lines.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10">
+                        <a href="products.html" class="inline-flex items-center text-brand font-semibold hover:text-brand-dark transition-colors group">
+                            Shop Now
+                            <i class="ri-arrow-right-line ml-2 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredients / Spa Banner -->
+    <section class="relative py-32 bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="assets/images/kdj_cream_spa.png" alt="Spa Background" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-4xl md:text-5xl font-bold text-white mb-6">Nature's Finest Ingredients</h2>
+            <p class="text-gray-300 text-xl leading-relaxed mb-10">
+                We believe in the power of nature. KDJ Cream is formulated with 100% organic, ethically sourced ingredients that pamper your skin and soothe your soul.
+            </p>
+            <a href="about.html" class="bg-brand text-white px-8 py-3 rounded-full hover:bg-white hover:text-brand transition-colors duration-300">Our Ingredients</a>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-24 bg-brand-light">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-brand font-medium tracking-widest uppercase text-sm mb-4 block">Testimonials</span>
+            <h2 class="font-serif text-4xl font-bold text-gray-900 mb-16">Loved by Thousands</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-brand mb-4">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Absolutely life-changing. My skin has never felt this hydrated and glowing. I get compliments every day!"</p>
+                    <h4 class="font-semibold text-gray-900">- Sarah M.</h4>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow transform md:-translate-y-4 border border-brand/20">
+                    <div class="text-brand mb-4">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"KDJ Cream is the only moisturizer I need. The texture is so luxurious and it smells incredible. Highly recommend."</p>
+                    <h4 class="font-semibold text-gray-900">- Emily R.</h4>
+                </div>
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                    <div class="text-brand mb-4">
+                        <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-6">"Worth every penny. Fine lines are visibly reduced and my complexion is so much brighter after just two weeks."</p>
+                    <h4 class="font-semibold text-gray-900">- Jessica T.</h4>
+                </div>
+            </div>
+         </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <span class="font-serif text-3xl font-bold tracking-wider text-brand mb-6 block">KDJ.</span>
+                    <p class="text-gray-400">Elevating your skincare routine to a luxurious experience.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="products.html" class="text-gray-400 hover:text-white transition-colors">Shop</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-6">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Enter your email" class="bg-gray-800 text-white px-4 py-2 rounded-l-md w-full focus:outline-none focus:ring-1 focus:ring-brand">
+                        <button class="bg-brand px-4 py-2 rounded-r-md hover:bg-brand-dark transition-colors">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2024 KDJ Cosmetics. All rights reserved.</p>
+                <div class="flex space-x-4 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-brand text-xl"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-brand text-xl"><i class="ri-facebook-fill"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-brand text-xl"><i class="ri-twitter-x-line"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

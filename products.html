@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | KDJ Cream</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fcf8f4',
+                            DEFAULT: '#d4af37',
+                            dark: '#ae8828',
+                            text: '#2d3748'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-brand-text bg-brand-light antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-gray-100"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-gray-900 tracking-wider">KDJ.</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-brand transition-colors">Home</a>
+                    <a href="products.html" class="text-brand-dark font-medium transition-colors">Shop</a>
+                    <a href="about.html" class="text-gray-600 hover:text-brand transition-colors">Our Story</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brand transition-colors">Contact</a>
+                    <a href="#"
+                        class="bg-gray-900 text-white px-6 py-2.5 rounded-full hover:bg-brand transition-colors duration-300 shadow-md flex items-center gap-2">
+                        <i class="ri-shopping-cart-2-line"></i> Cart (0)
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-brand-dark font-medium">Shop</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Our Story</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-white pt-32 pb-16 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="font-serif text-4xl md:text-6xl font-bold text-gray-900 mb-4">Our Collection</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Discover the perfect addition to your daily skincare
+                ritual. Carefully formulated to reveal your natural glow.</p>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Filters & Sort -->
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12 border-b border-gray-200 pb-6">
+                <div class="flex space-x-6 mb-4 md:mb-0 text-gray-600">
+                    <button class="text-brand-dark font-medium border-b-2 border-brand-dark pb-1">All Products</button>
+                    <button class="hover:text-brand transition-colors">Moisturizers</button>
+                    <button class="hover:text-brand transition-colors">Serums</button>
+                    <button class="hover:text-brand transition-colors">Cleansers</button>
+                </div>
+                <div>
+                    <select
+                        class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md focus:outline-none focus:ring-1 focus:ring-brand">
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Best Selling</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Product 1 (Hero Product) -->
+                <div
+                    class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 product-card-hover group animate-fade-in-up">
+                    <div
+                        class="relative mb-6 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-8 h-72">
+                        <div
+                            class="absolute top-4 left-4 bg-brand text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                            Best Seller</div>
+                        <img src="assets/images/kdj_cream_product.png" alt="KDJ Signature Cream"
+                            class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-500 relative z-0">
+                        <!-- Add to Cart Overlay -->
+                        <div
+                            class="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 z-20">
+                            <button
+                                class="bg-gray-900 text-white font-medium py-3 px-8 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-brand">
+                                Add to Cart - $120
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold text-gray-900">The Signature Cream</h3>
+                            <span class="text-lg font-medium text-brand">$120.00</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">Our award-winning daily moisturizer
+                            engineered to deeply hydrate, plump, and restore your skin's youthful bounce.</p>
+                        <div class="flex text-brand text-sm">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            <span class="text-gray-400 ml-2">(428 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 product-card-hover group animate-fade-in-up"
+                    style="animation-delay: 100ms;">
+                    <div
+                        class="relative mb-6 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-8 h-72">
+                        <img src="assets/images/kdj_cream_product.png" alt="Night Repair Elixir"
+                            class="w-4/5 h-4/5 object-contain transform group-hover:scale-105 transition-transform duration-500 filter sepia(0.2) hue-rotate(-20deg) brightness(0.9)">
+                        <div
+                            class="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 z-20">
+                            <button
+                                class="bg-gray-900 text-white font-medium py-3 px-8 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-brand">
+                                Add to Cart - $95
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold text-gray-900">Night Repair Elixir</h3>
+                            <span class="text-lg font-medium text-brand">$95.00</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">A potent overnight recovery formula that
+                            accelerates cell turnover and repairs environmental damage while you sleep.</p>
+                        <div class="flex text-brand text-sm">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-half-line"></i>
+                            <span class="text-gray-400 ml-2">(156 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 product-card-hover group animate-fade-in-up"
+                    style="animation-delay: 200ms;">
+                    <div
+                        class="relative mb-6 overflow-hidden rounded-xl bg-gray-50 flex items-center justify-center p-8 h-72">
+                        <div
+                            class="absolute top-4 left-4 bg-gray-900 text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+                            New</div>
+                        <img src="assets/images/kdj_cream_product.png" alt="Radiance C-Serum"
+                            class="w-3/5 h-3/5 object-contain transform group-hover:scale-105 transition-transform duration-500 filter hue-rotate(40deg) brightness(1.1)">
+                        <div
+                            class="absolute inset-0 bg-white/40 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-6 z-20">
+                            <button
+                                class="bg-gray-900 text-white font-medium py-3 px-8 rounded-full shadow-lg transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-brand">
+                                Add to Cart - $145
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-xl font-bold text-gray-900">Radiance C-Serum</h3>
+                            <span class="text-lg font-medium text-brand">$145.00</span>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2">A highly concentrated dose of stable Vitamin
+                            C complex to instantly brighten, firm, and protect skin against free radicals.</p>
+                        <div class="flex text-brand text-sm">
+                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i
+                                class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            <span class="text-gray-400 ml-2">(89 reviews)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-brand">
+        <!-- Footer content same as index.html -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2024 KDJ Cosmetics. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-brand text-xl"><i class="ri-instagram-line"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-brand text-xl"><i class="ri-facebook-fill"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

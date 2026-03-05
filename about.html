@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | KDJ Cream</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#fcf8f4',
+                            DEFAULT: '#d4af37',
+                            dark: '#ae8828',
+                            text: '#2d3748'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Remixicons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body class="font-sans text-brand-text bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/80 border-b border-gray-100"
+        id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="font-serif text-3xl font-bold text-gray-900 tracking-wider">KDJ.</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-600 hover:text-brand transition-colors">Home</a>
+                    <a href="products.html" class="text-gray-600 hover:text-brand transition-colors">Shop</a>
+                    <a href="about.html" class="text-brand-dark font-medium transition-colors">Our Story</a>
+                    <a href="contact.html" class="text-gray-600 hover:text-brand transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="ri-menu-line text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Home</a>
+                <a href="products.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Shop</a>
+                <a href="about.html" class="block px-3 py-2 text-brand-dark font-medium">Our Story</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-600 hover:text-brand">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / Intro -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center max-w-3xl mx-auto mb-20 animate-fade-in-up">
+            <span class="text-brand font-medium tracking-widest uppercase text-sm mb-4 block">The Genesis</span>
+            <h1 class="font-serif text-5xl md:text-6xl font-bold text-gray-900 mb-8">Born from Nature, <br>Refined by
+                Science.</h1>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                KDJ wasn't created in a boardroom. It was born out of a personal quest to find skincare that respects
+                the delicate balance of nature while delivering uncompromising, visible results.
+            </p>
+        </div>
+
+        <!-- Image Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+            <div class="rounded-2xl overflow-hidden h-96 animate-fade-in-up" style="animation-delay: 100ms;">
+                <img src="assets/images/kdj_cream_spa.png" alt="Spa Ingredients" class="w-full h-full object-cover">
+            </div>
+            <div class="rounded-2xl overflow-hidden h-96 animate-fade-in-up" style="animation-delay: 200ms;">
+                <img src="assets/images/kdj_model.png" alt="Natural Beauty"
+                    class="w-full h-full object-cover object-top filter brightness-110">
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="bg-brand-light py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-4xl font-bold text-gray-900">Our Commitments</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center text-brand text-3xl mb-6 shadow-sm">
+                        <i class="ri-leaf-line"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-4">Purity First</h3>
+                    <p class="text-gray-600">We source only the highest grade, ethically harvested organic botanicals.
+                        No parabens, no sulfates, no compromises.</p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center text-brand text-3xl mb-6 shadow-sm">
+                        <i class="ri-magic-line"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-4">Efficacy</h3>
+                    <p class="text-gray-600">Every ingredient earns its place. Formulated by leading dermatologists to
+                        ensure deep penetration and cellular rejuvenation.</p>
+                </div>
+
+                <div class="text-center">
+                    <div
+                        class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center text-brand text-3xl mb-6 shadow-sm">
+                        <i class="ri-earth-line"></i>
+                    </div>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-4">Sustainability</h3>
+                    <p class="text-gray-600">Our packaging is 100% recyclable, and our manufacturing processes are
+                        designed to leave the lightest possible footprint on our planet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t-4 border-brand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            <p>&copy; 2024 KDJ Cosmetics. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
